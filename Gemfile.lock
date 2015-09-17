@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    poisol (0.1.8)
-      activesupport (>= 4.2.0)
+    poisol (0.1.9)
+      activesupport (>= 4.0)
 
 GEM
   remote: http://rubygems.org/
