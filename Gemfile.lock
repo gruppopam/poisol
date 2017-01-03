@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    poisol (0.1.9)
+    poisol (0.1.10)
       activesupport (>= 4.0)
 
 GEM
@@ -20,7 +20,7 @@ GEM
     json (1.8.3)
     method_source (0.8.2)
     mime-types (2.4.3)
-    minitest (5.8.0)
+    minitest (5.8.3)
     multi_json (1.10.1)
     netrc (0.10.2)
     pry (0.10.1)
@@ -67,3 +67,6 @@ DEPENDENCIES
   rubygems-tasks
   simplecov
   webrick
+
+BUNDLED WITH
+   1.13.7
