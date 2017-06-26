@@ -38,7 +38,7 @@ module Poisol
       method_name = "by_#{class_name}"
       define_method(method_name) do |*input_value|
         if input_value.blank?
-          @request.body << stub_config.request.body.deep_dup 
+          @request.body << stub_config.request.body.deep_dup
         else
           input = JSON.parse(input_value[0].to_json)
           @request.body << (stub_config.request.body.deep_dup).deep_merge!(input_value[0].stringify_keys)
@@ -79,7 +79,15 @@ module Poisol
       method_name = "by_#{field_name.classify.underscore}" 
       define_method(method_name) do |*input_value|
         input_value = input_value[0]
-        assignment_value = get_assignment_value actual_field_value,input_value
+        if input_value.nil?
+          input_value = []
+        elsif input_value.class.to_s != "Array"
+          input_value = [input_value]
+        end
+        assignment_value = []
+        input_value.each do |input|
+          assignment_value.push(get_assignment_value actual_field_value,input) 
+        end
         @request.body[field_name] =  [assignment_value]
         self
       end
