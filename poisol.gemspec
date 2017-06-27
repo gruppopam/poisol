@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'poisol'
-  s.version = '0.1.10'
+  s.version = '0.1.11'
   s.date = '2015-09-16'
   s.summary = 'HTTP stub as DSL'
   s.description = 'HTTP stub as DSL'
