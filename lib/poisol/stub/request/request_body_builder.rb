@@ -108,6 +108,7 @@ module Poisol
     end
 
     def generate_method_to_alter_request_field field_name,actual_field_value
+      return if field_name.nil?
       method_name = "by_#{field_name.underscore}"
       define_method(method_name) do |*input_value|
         input_value = input_value[0]
